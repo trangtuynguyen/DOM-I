@@ -42,18 +42,22 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let navi = document.querySelectorAll('header nav a');
-console.log(navi);
 
-navi[0].textContent = "Services";
-navi[1].textContent = "Products";
-navi[2].textContent = "Vision";
-navi[3].textContent = "Feature";
-navi[4].textContent = "About";
-navi[5].textContent = "Contact";
 
-let cta = document.querySelectorAll('.cta .cta-text');
-console.log(cta);
+navi[0].textContent = siteContent["nav"]["nav-item-1"];
+navi[1].textContent = siteContent["nav"]["nav-item-2"]
+navi[2].textContent = siteContent["nav"]["nav-item-3"];
+navi[3].textContent = siteContent["nav"]["nav-item-4"];
+navi[4].textContent = siteContent["nav"]["nav-item-5"];
+navi[5].textContent = siteContent["nav"]["nav-item-6"];
+
+let cta = document.querySelectorAll('.cta .cta-text h1');
 cta[0].textContent = siteContent["cta"]["h1"];
+
+const button = document.querySelectorAll("button");
+ button[0].textContent = siteContent["cta"]["button"];
+console.log(button);
+
 
 let codeSnip = document.getElementById("cta-img");
 codeSnip.setAttribute('src', siteContent["cta"]["img-src"]);
@@ -65,7 +69,30 @@ topC[1].textContent = siteContent["main-content"]['about-content'];
 let topCT = document.querySelectorAll('.top-content .text-content h4');
 topCT[0].textContent = siteContent["main-content"]['features-h4'];
 topCT[1].textContent = siteContent["main-content"]['about-h4'];
-console.log(topC);
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let bottomC = document.querySelectorAll('.bottom-content .text-content h4');
+bottomC[0].textContent = siteContent["main-content"]['services-h4'];
+bottomC[1].textContent = siteContent["main-content"]['product-h4'];
+bottomC[2].textContent = siteContent["main-content"]['vision-h4'];
+
+let bottomCT = document.querySelectorAll('.bottom-content .text-content p');
+bottomCT[0].textContent = siteContent["main-content"]['services-content'];
+bottomCT[1].textContent = siteContent["main-content"]['product-content'];
+bottomCT[2].textContent = siteContent["main-content"]['vision-content'];
+
+let contactH4 = document.querySelector(".contact h4");
+contactH4.textContent = siteContent["contact"]["contact-h4"];
+
+let contactP = document.querySelectorAll(".contact p");
+contactP[0].textContent = siteContent["contact"]["address"];
+contactP[1].textContent = siteContent["contact"]["phone"];
+contactP[2].textContent = siteContent["contact"]["email"];
+
+let foot = document.querySelector("footer p");
+foot.textContent = siteContent["footer"]["copyright"];
 
 
 
