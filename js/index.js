@@ -51,11 +51,19 @@ navi[3].textContent = siteContent["nav"]["nav-item-4"];
 navi[4].textContent = siteContent["nav"]["nav-item-5"];
 navi[5].textContent = siteContent["nav"]["nav-item-6"];
 
-let cta = document.querySelectorAll('.cta .cta-text h1');
-cta[0].textContent = siteContent["cta"]["h1"];
+navi[0].style.color = 'green';
+navi[1].style.color = 'green';
+navi[2].style.color = 'green';
+navi[3].style.color = 'green';
+navi[4].style.color = 'green';
+navi[5].style.color = 'green';
 
-const button = document.querySelectorAll("button");
- button[0].textContent = siteContent["cta"]["button"];
+
+let cta = document.querySelector('.cta .cta-text h1');
+cta.textContent = siteContent["cta"]["h1"];
+
+const button = document.querySelector("button");
+ button.textContent = siteContent["cta"]["button"];
 console.log(button);
 
 
@@ -93,6 +101,19 @@ contactP[2].textContent = siteContent["contact"]["email"];
 
 let foot = document.querySelector("footer p");
 foot.textContent = siteContent["footer"]["copyright"];
+
+const price = document.createElement("a");
+const warranty = document.createElement("a");
+
+price.textContent = "Price";
+warranty.textContent = "Warranty";
+
+price.style.color = 'green';
+warranty.style.color = 'green';
+
+let nav = document.querySelector('header nav');
+nav.appendChild(price);
+nav.prepend(warranty);
 
 
 
