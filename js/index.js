@@ -44,6 +44,24 @@ logoImg.src = siteContent['nav']['img-src'];
 
 let nav = document.querySelectorAll('nav a');
 
+
+let navMain = document.querySelector('nav');
+
+let el1 = document.createElement('a');
+el1.textContent = "Price";
+el1.style.color = 'green';
+navMain.appendChild(el1);
+
+let el2 = document.createElement('a');
+el2.style.color = 'green';
+el2.textContent = "Stories";
+navMain.prepend(el2);
+
+
+for(let i=0;i<nav.length; i++){
+  nav[i].style.color = 'green';
+}
+
 nav[0].textContent = siteContent["nav"]["nav-item-1"];
 nav[1].textContent = siteContent["nav"]["nav-item-2"]
 nav[2].textContent = siteContent["nav"]["nav-item-3"];
@@ -77,6 +95,20 @@ p[1].textContent = siteContent["main-content"]["about-content"];
 p[2].textContent = siteContent["main-content"]["services-content"];
 p[3].textContent = siteContent["main-content"]["product-content"];
 p[4].textContent = siteContent["main-content"]["vision-content"];
+
+let contactH4 = document.querySelector('.contact h4');
+let contactP = document.querySelectorAll('.contact p');
+
+contactH4.textContent = siteContent['contact']['contact-h4'];
+contactP[0].textContent = siteContent['contact']['address'];
+contactP[1].textContent = siteContent['contact']['phone'];
+contactP[2].textContent = siteContent['contact']['email'];
+
+let footer = document.querySelector('footer p');
+
+footer.textContent = siteContent['footer']['copyright'];
+
+
 
 console.log(h4);
 
